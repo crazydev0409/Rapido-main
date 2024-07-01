@@ -1,69 +1,79 @@
-<<<<<<< HEAD
-# Hexis Backend API
-
-A GraphQL API for Hexis Web & App
-
-## Prerequisites
-
-To build and run this app locally you will need:
-
-- Install [Node.js](https://nodejs.org/en/)
-- Install [Redis](https://redis.io/docs/getting-started/)
-- Install [Postgres](https://www.postgresql.org/download/)
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
 
-- Clone the repository and Install dependencies
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+
+## Step 1: Start the Metro Server
+
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+
+To start Metro, run the following command from the _root_ of your React Native project:
 
 ```bash
-npm install
-# or
-yarn
+# using npm
+npm start
+
+# OR using Yarn
+yarn start
 ```
 
-- Create a `.env` file by duplicating the contents of `.example.env` and updating the fields respectively (Speak to a fellow developer)
+## Step 2: Start your Application
 
-```
-cp .example.env .env
-```
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-- Run the project
+### For Android
 
 ```bash
-npm run dev
-# or
-yarn dev
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
 ```
 
-## Environment variables
+### For iOS
 
-Create a .env file (or just rename the .example.env) containing all the env variables you want to set, dotenv library will take care of setting them. This project is using three variables at the moment:
+```bash
+# using npm
+npm run ios
 
-- `PORT` -> Port where the server will be started on
-- `DATABASE_URL` -> A remote Postgres URL. e.g. =postgres://postgres:xxxxx@db.zbbwlvunazmamwsjhwrv.supabase.co:6543/postgres?pgbouncer=true
-- `REDIS_PASSWORD` -> Redis Database credentials
-- `ENGINES_API_ENDPOINT` -> A python endpoint for Hexis
-- `SUPABASE_URL` -> Supabase database URL
-- `SUPABASE_SERVICE_ROLE_KEY` -> Supabase Service role key
-- `SUPABASE_IMAGE_ASSETS_URL` -> URL for where the assets are stored
-- `STRIPE_SECRET_KEY` -> Stripe key
-- `SENTRY_DSN` -> Sentry URL
+# OR using Yarn
+yarn ios
+```
 
-### Adding types and definitions to Prisma
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-1. Add in the type to the enums file under source -> schems -> enums.ts
-1. Update the schema.prisma file in prisma -> schema.prisma with the enum and use it.
-1. Run `npm run postinstall` and it should create the definition for you.
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Creators
+## Step 3: Modifying your App
 
-**Team**
+Now that you have successfully run the app, let's modify it.
 
-- <https://github.com/orgs/abs-hexis/people>
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-## Copyright and License
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-copyright 2022 ABS
-=======
-# hexis-backend
->>>>>>> 3c3e923a10797ec3daf6299076fc4d23440cb8a3
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
